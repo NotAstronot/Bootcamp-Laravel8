@@ -16,7 +16,13 @@ class CreateDetailUserTable extends Migration
         Schema::create('detail_user', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
+            $table->integer('type_user_id');
+            $table->string('contact')->nullabe();
+            $table->longText('address')->nullabe();
+            $table->longText('photo')->nullabe();
+            $table->enum('gender',[1,2])->nullabe();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
