@@ -2,7 +2,10 @@
 
 namespace App\Http\Requests\User;
 
+use App\Models\user;
+// use Gate; 
 use Illuminate\Foundation\Http\FormRequest;
+use Symfony\Component\HttpFoundation\Response;
 
 class StoreUserRequest extends FormRequest
 {
@@ -13,7 +16,8 @@ class StoreUserRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        // buat middleware dari kernel disini 
+        return true;
     }
 
     /**
@@ -24,7 +28,16 @@ class StoreUserRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => [
+                'required', 'string', 'max: 255',
+            ],
+            'email' => [
+                'required', 'email', 'unique:users', 'max: 255',
+            ],
+            'password' => [
+                'min:8', 'string', 'max: 255', 'mixedCase',
+            ],
+            // ada validasi untuk role disini
         ];
     }
 }

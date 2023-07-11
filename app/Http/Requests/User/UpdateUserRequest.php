@@ -2,8 +2,13 @@
 
 namespace App\Http\Requests\User;
 
+use App\Models\user;
+// use Gate; 
 use Illuminate\Foundation\Http\FormRequest;
+use Symfony\Component\HttpFoundation\Response;
 
+// rule hanya ada di update request 
+use illuminate\Validation\Rule;
 class UpdateUserRequest extends FormRequest
 {
     /**
@@ -13,7 +18,7 @@ class UpdateUserRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +29,17 @@ class UpdateUserRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => [
+                'required', 'string', 'max: 255',
+            ],
+            'email' => [
+                'required', 'email','max: 255', Rule::unique('users')->ignore($this->user),
+                // rule unique hanya bekerja untuk other record id 
+            ],
+            'password' => [
+                'min:8', 'string', 'max: 255', 'mixedCase',
+            ],
+            // ada validasi untuk role disini
         ];
     }
 }
