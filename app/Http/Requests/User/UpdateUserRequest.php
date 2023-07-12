@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 // rule hanya ada di update request 
 use illuminate\Validation\Rule;
+
 class UpdateUserRequest extends FormRequest
 {
     /**
@@ -18,6 +19,7 @@ class UpdateUserRequest extends FormRequest
      */
     public function authorize()
     {
+        // create middleware dari kernel disini 
         return true;
     }
 
@@ -30,14 +32,14 @@ class UpdateUserRequest extends FormRequest
     {
         return [
             'name' => [
-                'required', 'string', 'max: 255',
+                'required', 'string', 'max:255',
             ],
             'email' => [
-                'required', 'email','max: 255', Rule::unique('users')->ignore($this->user),
-                // rule unique hanya bekerja untuk other record id 
+                'required', 'email','max:255', Rule::unique('users')->ignore($this->user),
+                // Rule unique hanya bekerja untuk other record id 
             ],
             'password' => [
-                'min:8', 'string', 'max: 255', 'mixedCase',
+                'min:8', 'string', 'max: 55', 'mixedCase',
             ],
             // ada validasi untuk role disini
         ];
