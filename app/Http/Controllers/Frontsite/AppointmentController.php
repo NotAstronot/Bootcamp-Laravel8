@@ -3,10 +3,33 @@
 namespace App\Http\Controllers\Frontsite;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+
+// pakai library disini 
+use illuminate\Support\Facades\Storage;
+use Symfony\Component\HttpFoundation\Request;
+
+// use everything here
+// use Gate;
+use Auth;
+
+// model here (model pakainya disini)
+use App\Models\User;
+use App\Models\Operatinal\Doctor;
+use App\Models\MasterData\Consultation;
 
 class AppointmentController extends Controller
 {
+    /** 
+     * Create a new controller instance.
+     * 
+     * @return void 
+     * 
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
