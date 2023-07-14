@@ -7,12 +7,15 @@ use App\Http\Controllers\Controller;
 use illuminate\Support\Facades\Storage;
 use Symfony\Component\HttpFoundation\Request;
 
+/// use everything here
 // use Gate;
 use Auth;
 
 
-
-
+// model here 
+use App\Models\User;
+use App\Models\Operatinal\Doctor;
+use App\Models\MasterData\Specialist;
 class LandingController extends Controller
 {
     /**
