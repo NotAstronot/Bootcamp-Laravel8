@@ -21,7 +21,6 @@ use App\Models\MasterData\Consultation;
 use App\Models\MasterData\Specialist;
 use App\Models\MasterData\ConfigPayment;
 
-
 class PaymentController extends Controller
 {
 
