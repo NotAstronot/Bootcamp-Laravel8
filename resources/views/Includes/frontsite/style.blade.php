@@ -5,3 +5,12 @@
     />
 
     <link rel="stylesheet" href="{{ asset('/assets/frontsite/style.css') }}" />
+
+
+
+
+
+
+
+
+    
