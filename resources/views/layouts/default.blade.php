@@ -2,24 +2,24 @@
 <html lang="en">
         <head>
 
-            @include('includes.fronsite.meta')
+            @include('includes.frontsite.meta')
 
             <title>@yield('title') | MeetDoctor</title>
 
             @stack('before-style')
-                @include('includes.fronsite.style')
+                @include('includes.frontsite.style')
             @stack('after-style')
 
 
         </head>
     <body>
-            @include('components.fronsite.header')
+            @include('components.frontsite.header')
                 @yield('content')
-            @include('components.fronsite.footer')
+            @include('components.frontsite.footer')
 
 
             @stack('before-script')
-                @include('includes.fronsite.script')
+                @include('includes.frontsite.script')
             @stack('after-script')
 
             {{-- jika punya model diletakan dibawah disini --}}
