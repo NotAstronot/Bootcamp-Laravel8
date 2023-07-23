@@ -18,14 +18,15 @@ class User extends Authenticatable
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
-    use SoftDeletes;
 
+    use SoftDeletes;
 
 
     protected $date = [
         'created_at',
         'updated_at',
         'deleted_at',
+        'email_verified_at',
     ];
 
 

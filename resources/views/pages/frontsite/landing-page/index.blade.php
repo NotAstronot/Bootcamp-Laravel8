@@ -143,7 +143,7 @@
 
             <!-- Card -->
             <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 lg:gap-10 mt-10">
-                <a href="src/pages/subject-consultation.html" class="group">
+                <a href="{{ route('appointment.index') }}" class="group">
                 <div class="relative z-10 w-full h-[350px] rounded-2xl overflow-hidden">
                     <img src="{{ asset('assets/frontsite/images/doctor-1.png')}}" class="w-full h-full bg-center bg-no-repeat object-cover object-center" alt="Doctor 1">
                 <div class="opacity-0 group-hover:opacity-100 transition-all ease-in absolute inset-0 bg-[#0D63F3] bg-opacity-70 flex justify-center items-center">
@@ -162,7 +162,7 @@
             </div>
                 </a>
 
-                <a href="src/pages/subject-consultation.html" class="group">
+                <a href="{{ route('appointment.index') }}" class="group">
                 <div class="relative z-10 w-full h-[350px] rounded-2xl overflow-hidden">
                     <img src="{{ asset('assets/frontsite/images/doctor-2.png')}}" class="w-full h-full bg-center bg-no-repeat object-cover object-center" alt="Doctor 1">
                     <div class="opacity-0 group-hover:opacity-100 transition-all ease-in absolute inset-0 bg-[#0D63F3] bg-opacity-70 flex justify-center items-center">
@@ -179,7 +179,7 @@
                     <span class="block text-[#1E2B4F] font-medium">4.8</span>
                     </div>
                 </div>
-                </a> <a href="src/pages/subject-consultation.html" class="group">
+                </a> <a href="{{ route('appointment.index') }}" class="group">
                 <div class="relative z-10 w-full h-[350px] rounded-2xl overflow-hidden">
                     <img src="{{ asset('assets/frontsite/images/doctor-3.png') }}" class="w-full h-full bg-center bg-no-repeat object-cover object-center" alt="Doctor 1">
                     <div class="opacity-0 group-hover:opacity-100 transition-all ease-in absolute inset-0 bg-[#0D63F3] bg-opacity-70 flex justify-center items-center">
@@ -198,7 +198,7 @@
                 </div>
                 </a>
 
-                <a href="src/pages/subject-consultation.html" class="group">
+                <a href="{{ route('appointment.index') }}" class="group">
                 <div class="relative z-10 w-full h-[350px] rounded-2xl overflow-hidden">
                     <img src="{{ asset('assets/frontsite/images/doctor-4.png')}}" class="w-full h-full bg-center bg-no-repeat object-cover object-center" alt="Doctor 1">
                     <div class="opacity-0 group-hover:opacity-100 transition-all ease-in absolute inset-0 bg-[#0D63F3] bg-opacity-70 flex justify-center items-center">
