@@ -107,5 +107,5 @@ class LandingController extends Controller
         return abort(404);
     }
 
-    //Custom funtion tertentu 
+    //Custom function tertentu 
 }
