@@ -27,28 +27,24 @@
                     items-center px-1 pt-1 text-lg font-medium"
             -->
                 <a
-                href="{{ route('index') }}"
-                class="text-[#1E2B4F] relative {{ request()->is('/') ? "after:absolute after:content-[''] after:border-b-2 after:border-[#0D63F5] after:w-8/12 after:-translate-x-1/2 after:bottom-3 after:left-1/2 font-semibold inline-flex items-center px-1 text-lg" : "hover:text-gray-500 inline-flex items-center px-1 pt-1 text-lg font-medium" }} "
-                >
-                Home
+                    href="{{ route('index') }}"
+                    class="text-[#1E2B4F] relative {{ request()->is('/') ? "after:absolute after:content-[''] after:border-b-2 after:border-[#0D63F5] after:w-8/12 after:-translate-x-1/2 after:bottom-3 after:left-1/2 font-semibold inline-flex items-center px-1 text-lg" : "hover:text-gray-500 inline-flex items-center px-1 pt-1 text-lg font-medium" }} ">
+                    Home
                 </a>
                 <a
-                href="#"
-                class="text-[#1E2B4F] relative hover:text-gray-500 inline-flex items-center px-1 pt-1 text-lg font-medium"
-                >
-                Featured
+                    href="#"
+                    class="text-[#1E2B4F] relative hover:text-gray-500 inline-flex items-center px-1 pt-1 text-lg font-medium">
+                    Featured
                 </a>
                 <a
-                href="#"
-                class="text-[#1E2B4F] relative hover:text-gray-500 inline-flex items-center px-1 pt-1 text-lg font-medium"
-                >
-                Category
+                    href="#"
+                    class="text-[#1E2B4F] relative hover:text-gray-500 inline-flex items-center px-1 pt-1 text-lg font-medium">
+                    Category
                 </a>
                 <a
-                href="#"
-                class="text-[#1E2B4F] relative hover:text-gray-500 inline-flex items-center px-1 pt-1 text-lg font-medium"
-                >
-                Pricing
+                    href="#"
+                    class="text-[#1E2B4F] relative hover:text-gray-500 inline-flex items-center px-1 pt-1 text-lg font-medium">
+                    Pricing
                 </a>
             </div>
 
@@ -134,8 +130,8 @@
                             id="user-menu-button"
                             aria-expanded="false"
                             aria-haspopup="true"
-                            @click="profileDekstopOpen = ! profileDekstopOpen"
-                        >
+                            @click="profileDekstopOpen = ! profileDekstopOpen">
+
                             <!-- focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 -->
                             <span class="sr-only">Open user menu</span>
                             <div class="text-right mr-5">
@@ -147,41 +143,38 @@
                             <img
                             class="h-12 w-12 rounded-full ring-1 ring-offset-4 ring-[#0D63F3]"
                             src="{{ asset('/assets/frontsite/images/authenticated-user.svg') }}"
-                            alt="User Profile"
-                            />
+                            alt="User Profile"/>
+
                         </button>
-                        </div>
+                    </div>
                         <div
-                        x-show="profileDekstopOpen"
-                        @click.outside="profileDekstopOpen = false"
-                        x-transition:enter="transition ease-out duration-200"
-                        x-transition:enter-start="opacity-0 scale-95"
-                        x-transition:enter-end="opacity-100 scale-100"
-                        x-transition:leave="transition ease-in duration-75"
-                        x-transition:leave-start="opacity-100 scale-100"
-                        x-transition:leave-end="opacity-0 scale-95"
-                        class="origin-top-right absolute z-30 right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
-                        role="menu"
-                        aria-orientation="vertical"
-                        aria-labelledby="user-menu-button"
-                        tabindex="-1"
-                        >
+                            x-show="profileDekstopOpen"
+                            @click.outside="profileDekstopOpen = false"
+                            x-transition:enter="transition ease-out duration-200"
+                            x-transition:enter-start="opacity-0 scale-95"
+                            x-transition:enter-end="opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-75"
+                            x-transition:leave-start="opacity-100 scale-100"
+                            x-transition:leave-end="opacity-0 scale-95"
+                            class="origin-top-right absolute z-30 right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                            role="menu"
+                            aria-orientation="vertical"
+                            aria-labelledby="user-menu-button"
+                            tabindex="-1">
                         <a
                             href="#"
                             class="block px-4 py-2 text-sm text-[#1E2B4F] hover:bg-gray-100"
                             role="menuitem"
                             tabindex="-1"
                             id="user-menu-item-0"
-                            >Your Profile</a
-                        >
+                            >Your Profile</a>
                         <a
                             href="#"
                             class="block px-4 py-2 text-sm text-[#1E2B4F] hover:bg-gray-100"
                             role="menuitem"
                             tabindex="-1"
                             id="user-menu-item-1"
-                            >Settings</a
-                        >
+                            >Settings</a>
                         <a
                             href="{{ route('logout') }}"
                             onclick="event.preventDefault(); document.getElementById('logout-form'). submit();"
@@ -198,7 +191,7 @@
                         </div>
                     </div>
                     </div>
-        
+
                     <!-- Mobile Toggle button -->
                     <div class="-mr-2 flex items-center lg:hidden">
                     <button
@@ -270,37 +263,31 @@
                         hover:border-gray-300 hover:text-gray-700" 
             -->
             <a
-            href="{{ route('index') }}"
-            class="bg-indigo-50 border-[#0D63F5] text-[#1E2B4F] block pl-3 pr-4 py-2 border-l-4 text-base font-semibold"
-            >Home</a
-            >
+                href="{{ route('index') }}"
+                class="bg-indigo-50 border-[#0D63F5] text-[#1E2B4F] block pl-3 pr-4 py-2 border-l-4 text-base font-semibold"
+            >Home</a>
             <a
-            href="#"
-            class="border-transparent text-[#1E2B4F] hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-            >Featured</a
-            >
+                href="#"
+                class="border-transparent text-[#1E2B4F] hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+            >Featured</a>
             <a
-            href="#"
-            class="border-transparent text-[#1E2B4F] hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-            >Category</a
-            >
+                href="#"
+                class="border-transparent text-[#1E2B4F] hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+            >Category</a>
             <a
-            href="#"
-            class="border-transparent text-[#1E2B4F] hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-            >Pricing</a
-            >
+                href="#"
+                class="border-transparent text-[#1E2B4F] hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+            >Pricing</a>
         </div>
 
         <!-- Profile (Mobile no authenticated) -->
         <div
-            class="py-3 border-gray-200"
-        >
+            class="py-3 border-gray-200">
         <a
-                href="{{ route('login') }}"
-                class="flex items-center justify-center text-center mx-4 rounded-full text-[#1E2B4F] text-lg font-medium bg-[#F2F6FE] px-10 py-3"
-            >
+            href="{{ route('login') }}"
+            class="flex items-center justify-center text-center mx-4 rounded-full text-[#1E2B4F] text-lg font-medium bg-[#F2F6FE] px-10 py-3">
             Sign In
-            </a>
+        </a>
         </div>
 
         </div>
